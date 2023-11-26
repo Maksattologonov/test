@@ -10,6 +10,12 @@ class ApartmentService:
     def get_apartment(cls, **filters):
         try:
             return cls.apartment.objects.filter(**filters)
-        except cls.model.DoesNotExist:
+        except cls.apartment.DoesNotExist:
             raise
 
+    @classmethod
+    def get_manager(cls, **filters):
+        try:
+            return cls.manager.objects.filter(**filters)
+        except cls.manager.DoesNotExist:
+            raise

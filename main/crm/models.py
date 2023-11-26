@@ -27,7 +27,7 @@ class Apartment(models.Model):
     name = models.CharField(max_length=255, verbose_name="Название")
     apart_no = models.CharField(max_length=100, verbose_name="Номер")
     floor = models.IntegerField(verbose_name="Этаж")
-    area = models.DecimalField(verbose_name="Площадь", decimal_places=1, max_digits=5)
+    area = models.DecimalField(verbose_name="Площадь", decimal_places=1, max_digits=5   )
     date = models.DateField(verbose_name="Дата")
     status = models.CharField(choices=STATUS, max_length=20, verbose_name="Статус")
     price = models.PositiveIntegerField(verbose_name="Цена")
